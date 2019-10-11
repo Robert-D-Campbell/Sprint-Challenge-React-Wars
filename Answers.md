@@ -9,7 +9,8 @@ React Js is a JavaScript Library and it takes unnecessary rendering out of the e
 pay attention to state, keep track of your sideEffects break everything up into reusable components.
 
 1. Describe state.
-   state is the current render fo your application. when state changes react re-renders
+   state is the current render fo your application. when state changes react re-renders to reflect current state
+
 1. Describe props.
    props are parameters passed down from parent objects.
 
