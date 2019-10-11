@@ -20,9 +20,9 @@ export default function CharList() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [characters]);
 
-  const [apiUrl, setApiUrl] = useState("https://swapi.co/api/people/");
+  const [apiUrl, setApiUrl] = useState(`https://swapi.co/api/people/?page=1`);
 
   useEffect(() => {
     axios
@@ -41,17 +41,23 @@ export default function CharList() {
     <>
       <Pagination className="pagination" aria-label="Page navigation example">
         <PaginationItem>
-          <PaginationLink onClick={() => setApiUrl(apiUrl + "?page=1")}>
+          <PaginationLink
+            onClick={() => setApiUrl(`https://swapi.co/api/people/?page=1`)}
+          >
             1
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink onClick={() => setApiUrl(apiUrl + "?page=2")}>
+          <PaginationLink
+            onClick={() => setApiUrl(`https://swapi.co/api/people/?page=2`)}
+          >
             2
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink onClick={() => setApiUrl(apiUrl + "?page=3")}>
+          <PaginationLink
+            onClick={() => setApiUrl(`https://swapi.co/api/people/?page=3`)}
+          >
             3
           </PaginationLink>
         </PaginationItem>
@@ -81,7 +87,9 @@ export default function CharList() {
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink onClick={() => setApiUrl(apiUrl + "?page=9")}>
+          <PaginationLink
+            onClick={() => setApiUrl(`https://swapi.co/api/people/?page=1`)}
+          >
             9
           </PaginationLink>
         </PaginationItem>
